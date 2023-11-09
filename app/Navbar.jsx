@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { Modal } from "./components/global/Modal";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import ReactVisibilitySensor from "react-visibility-sensor";
 
 export default function Navbar() {
   const dataSearch = [
@@ -47,7 +48,6 @@ export default function Navbar() {
           });
         });
       }
-      
     });
   }
 
@@ -166,20 +166,32 @@ export default function Navbar() {
           {search().length > 0 ? (
             search().map((child, index) => {
               return (
-                <div
+                <ReactVisibilitySensor
+                  partialVisibility
+                  offset={{ bottom: -300 }}
                   key={index}
-                  className="cursor-pointer transition mt-3 ease-in-out hover:-translate-y-1 hover:scale-95 p-3 bg-gray-600 rounded-lg bg-blue-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-30 hover:bg-opacity-50 border border-gray-100"
                 >
-                  <h5 className="font-medium">{child.title}</h5>
-                  <p className="text-[12px] text-gray-400">
-                    {child.company} |{" "}
-                    {child?.category?.map((category, index) => {
-                      return index !== 0 ? ` | ${category}` : category;
-                    })}
-                  </p>
-                  <p></p>
-                  <p className="text-[12px] text-gray-400"></p>
-                </div>
+                  {({ isVisible }) => (
+                    <div
+                      className={
+                        "cursor-pointer transition mt-3 ease-in-out hover:-translate-y-1 hover:scale-95 p-3 bg-gray-600 rounded-lg bg-blue-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-30 hover:bg-opacity-50 border border-gray-100" +
+                        (isVisible
+                          ? " slideUp enter text-white"
+                          : "text-white slideUp")
+                      }
+                    >
+                      <h5 className="font-medium">{child.title}</h5>
+                      <p className="text-[12px] text-gray-400">
+                        {child.company} |{" "}
+                        {child?.category?.map((category, index) => {
+                          return index !== 0 ? ` | ${category}` : category;
+                        })}
+                      </p>
+                      <p></p>
+                      <p className="text-[12px] text-gray-400"></p>
+                    </div>
+                  )}
+                </ReactVisibilitySensor>
               );
             })
           ) : (

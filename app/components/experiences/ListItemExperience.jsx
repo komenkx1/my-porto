@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ReactVisibilitySensor from "react-visibility-sensor";
 
 export default function ListItem(props) {
   return (
@@ -14,31 +15,45 @@ export default function ListItem(props) {
               <div className="lg:grid lg:grid-cols-2 gap-5 ">
                 {experience?.item.map((item, index) => {
                   return (
-                    <div
+                    <ReactVisibilitySensor
+                      partialVisibility
+                      offset={{ bottom: -300 }}
                       key={index}
-                      className="cursor-pointer transition mt-3 ease-in-out hover:-translate-y-1 hover:scale-95 p-3 bg-gray-600 rounded-lg bg-blue-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-30 hover:bg-opacity-50 border border-gray-100"
                     >
-                      <div className="flex items-center gap-3">
-                        <div className="thumbnail rounded-lg w-[150px] h-[150px] p-3 lg:block md:block hidden">
-                          <Image
-                            src={item.logo}
-                            alt="experience-logo"
-                            width={150}
-                            height={150}
-                            className="rounded-lg drop-shadow-2xl mt-2"
-                          />
+                      {({ isVisible }) => (
+                        <div
+                          className={
+                            "cursor-pointer transition mt-3 ease-in-out hover:-translate-y-1 hover:scale-95 p-3 bg-gray-600 rounded-lg bg-blue-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-30 hover:bg-opacity-50 border border-gray-100" +
+                            (isVisible
+                              ? " slideUp enter text-white"
+                              : "text-white slideUp")
+                          }
+                        >
+                          <div className="flex items-center gap-3">
+                            <div className="thumbnail rounded-lg w-[150px] h-[150px] p-3 lg:block md:block hidden">
+                              <Image
+                                src={item.logo}
+                                alt="experience-logo"
+                                width={150}
+                                height={150}
+                                className="rounded-lg drop-shadow-2xl mt-2"
+                              />
+                            </div>
+                            <div className="info w-[450px]">
+                              <p className="font-medium text-white">
+                                {item.title}
+                              </p>
+                              <p className="mt-1 text-sm text-gray-300">
+                                {item.company} {item.periode}
+                              </p>
+                              <p className="mt-3 text-justify text-white text-[14px]">
+                                {item.desc}
+                              </p>
+                            </div>
+                          </div>
                         </div>
-                        <div className="info w-[450px]">
-                          <p className="font-medium text-white">{item.title}</p>
-                          <p className="mt-1 text-sm text-gray-300">
-                            {item.company} {item.periode}
-                          </p>
-                          <p className="mt-3 text-justify text-white text-[14px]">
-                            {item.desc}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
+                      )}
+                    </ReactVisibilitySensor>
                   );
                 })}
               </div>

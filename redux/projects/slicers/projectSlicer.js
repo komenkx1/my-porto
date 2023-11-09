@@ -44,6 +44,7 @@ const projectSlice = createSlice({
         category: ["Java"],
         desc: "Passtru is a mobile native application for save a credentials. this app build using java native for android and have a fingerprint security.",
       },
+      
     ],
     loading: false,
     error: null,
