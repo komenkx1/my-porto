@@ -1,3 +1,4 @@
+"use client";
 import { useSelector } from "react-redux";
 import Image from "next/image";
 import ProfileSkeleton from "./components/global/ProfileSkeleton";
@@ -6,18 +7,22 @@ import { fetchUserData } from "@/redux/users/actions/userAction";
 import { use, useEffect, useState } from "react";
 export default function ProfileSection() {
   const dispatch = useDispatch();
-  const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
+  const [isLoading, setIsLoading] = useState(true);
+  async function fetchUser() {
     dispatch(fetchUserData());
     setIsLoading(false);
+  }
+
+  useEffect(() => {
+    fetchUser();
   }, []);
 
   const user = useSelector((state) => state.user.data);
 
   return (
     <>
-      {isLoading && user == null ? (
+      {isLoading ? (
         <ProfileSkeleton />
       ) : (
         <div className="mx-h-screen lg:w-[300px] md:w-full p-3 bg-gray-600 rounded-lg bg-blue-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border border-gray-100">
@@ -125,7 +130,6 @@ export default function ProfileSection() {
                     height={60}
                   />
                 </div>
-                
               </div>
             </div>
           </div>

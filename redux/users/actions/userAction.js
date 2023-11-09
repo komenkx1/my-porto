@@ -7,9 +7,9 @@ import {
 } from "../slicers/userSlicer";
 
 export const fetchUserData = () => async (dispatch) => {
-  dispatch(fetchUserRequest());
-
+  
   try {
+    dispatch(fetchUserRequest());
     const response = await global.axios.get("/api/users/31"); // Ganti URL sesuai kebutuhan
     dispatch(fetchUserSuccess(response.data.data));
   } catch (error) {
