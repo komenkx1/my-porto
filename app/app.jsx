@@ -3,9 +3,12 @@ import { store } from "@/redux/store";
 import ProfileSection from "./ProfileSection";
 import Navbar from "./Navbar";
 import { Provider } from "react-redux";
-import axios from "../utils/axios";
+import { instance, baseUrl } from "../utils/axios";
+import formatDate from "@/utils/formatDate";
 export default function App({ children }) {
-  global.axios = axios;
+  global.axios = instance;
+  global.apibaseUrl = baseUrl;
+  global.formatDate = formatDate;
   return (
     <div className="lg:flex lg:gap-[15px]">
       <Provider store={store}>

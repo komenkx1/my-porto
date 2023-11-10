@@ -1,7 +1,7 @@
 import axios from "axios";
-
+const baseUrl = "http://localhost:3001";
 const instance = axios.create({
-  baseURL: "http://127.0.0.1:3001", // Ganti dengan base URL yang sesuai
+  baseURL: baseUrl, // Ganti dengan base URL yang sesuai
 });
 
-export default instance;
+export { instance, baseUrl };

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import ReactVisibilitySensor from "react-visibility-sensor";
-
+import { loader } from "next/image";
 export default function ListItem(props) {
   return (
     <>
@@ -13,7 +13,7 @@ export default function ListItem(props) {
               </p>
               <hr className="border-gray-600 pb-8" />
               <div className="lg:grid lg:grid-cols-2 gap-5 ">
-                {experience?.item.map((item, index) => {
+                {experience?.experiences?.map((item, index) => {
                   return (
                     <ReactVisibilitySensor
                       partialVisibility
@@ -32,7 +32,12 @@ export default function ListItem(props) {
                           <div className="flex items-center gap-3">
                             <div className="thumbnail rounded-lg w-[150px] h-[150px] p-3 lg:block md:block hidden">
                               <Image
-                                src={item.logo}
+                                loader={({ src }) => src}
+                                src={
+                                  item?.logo != null
+                                    ? `${global.apibaseUrl}/${item?.logo}`
+                                    : "/img/icon/next.png"
+                                }
                                 alt="experience-logo"
                                 width={150}
                                 height={150}
@@ -44,7 +49,11 @@ export default function ListItem(props) {
                                 {item.title}
                               </p>
                               <p className="mt-1 text-sm text-gray-300">
-                                {item.company} {item.periode}
+                                {item.companys?.name}{" "}
+                                {global.formatDate(item.start_date)} -{" "}
+                                {item.is_present
+                                  ? "Present"
+                                  : global.formatDate(item.end_date)}
                               </p>
                               <p className="mt-3 text-justify text-white text-[14px]">
                                 {item.desc}
