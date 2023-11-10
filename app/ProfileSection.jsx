@@ -24,7 +24,7 @@ export default function ProfileSection() {
           <div className="left-section">
             <div className="flex justify-center">
               <div className="w-[300px] px-5 py-[20px] flex justify-center">
-                <div className="rounded-full border border-gray-600 shadow shadow-lg w-[150px] h-[150px] bg-[url('/img/mangwahyu.png')] bg-center bg-cover"></div>
+                <div className="rounded-full border border-gray-600 shadow shadow-lg w-[150px] h-[150px] bg-[url('/static/img/mangwahyu.png')] bg-center bg-cover"></div>
               </div>
             </div>
             <hr className="border border-gray-500 my-3 border-[1px]" />
@@ -49,18 +49,18 @@ export default function ProfileSection() {
                 <div className="cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-110 dark:border-gray-700 dark:bg-gray-800 w-[45px] h-[45px]  bg-gray-600 rounded-lg bg-blue-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border border-gray-100">
                   <Image
                     className="mt-[5px]"
-                    src="/img/icon/github.png"
+                    src="/static/img/icon/github.png"
                     alt=""
                     width={60}
                     height={60}
                   />
                 </div>
                 <div className="cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-110 dark:border-gray-700 dark:bg-gray-800 w-[45px] h-[45px]  p-3 bg-gray-600 rounded-lg bg-blue-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border border-gray-100">
-                  <Image src="/img/icon/js.png" alt="" width={60} height={60} />
+                  <Image src="/static/img/icon/js.png" alt="" width={60} height={60} />
                 </div>
                 <div className="cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-110 dark:border-gray-700 dark:bg-gray-800 w-[45px] h-[45px]  p-2 bg-gray-600 rounded-lg bg-blue-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border border-gray-100">
                   <Image
-                    src="/img/icon/vuejs.png"
+                    src="/static/img/icon/vuejs.png"
                     alt=""
                     width={60}
                     height={60}
@@ -68,7 +68,7 @@ export default function ProfileSection() {
                 </div>
                 <div className="cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-110 dark:border-gray-700 dark:bg-gray-800 w-[45px] h-[45px]  p-3 bg-gray-600 rounded-lg bg-blue-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border border-gray-100">
                   <Image
-                    src="/img/icon/react.png"
+                    src="/static/img/icon/react.png"
                     alt=""
                     width={60}
                     height={60}
@@ -76,7 +76,7 @@ export default function ProfileSection() {
                 </div>
                 <div className="cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-110 dark:border-gray-700 dark:bg-gray-800 w-[45px] h-[45px]  p-3 bg-gray-600 rounded-lg bg-blue-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border border-gray-100">
                   <Image
-                    src="/img/icon/nuxt.webp"
+                    src="/static/img/icon/nuxt.webp"
                     alt=""
                     width={60}
                     height={60}
@@ -85,7 +85,7 @@ export default function ProfileSection() {
                 <div className="cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-110 dark:border-gray-700 dark:bg-gray-800 w-[45px] h-[45px]  bg-gray-600 rounded-lg bg-blue-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border border-gray-100">
                   <Image
                     className="mt-[2px]"
-                    src="/img/icon/next.png"
+                    src="/static/img/icon/next.png"
                     alt=""
                     width={60}
                     height={60}
@@ -94,7 +94,7 @@ export default function ProfileSection() {
                 <div className="cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-110 p-2 dark:border-gray-700 dark:bg-gray-800 w-[45px] h-[45px]  bg-gray-600 rounded-lg bg-blue-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border border-gray-100">
                   <Image
                     className="mt-[1px]"
-                    src="/img/icon/node.png"
+                    src="/static/img/icon/node.png"
                     alt=""
                     width={60}
                     height={60}
@@ -103,7 +103,7 @@ export default function ProfileSection() {
                 <div className="cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-110 dark:border-gray-700 dark:bg-gray-800 w-[45px] h-[45px]  p-1 bg-gray-600 rounded-lg bg-blue-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border border-gray-100">
                   <Image
                     className="mt-[2px]"
-                    src="/img/icon/php.png"
+                    src="/static/img/icon/php.png"
                     alt=""
                     width={60}
                     height={60}
@@ -111,7 +111,7 @@ export default function ProfileSection() {
                 </div>
                 <div className="cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-110 dark:border-gray-700 dark:bg-gray-800 w-[45px] h-[45px]  p-3 bg-gray-600 rounded-lg bg-blue-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border border-gray-100">
                   <Image
-                    src="/img/icon/laravel.png"
+                    src="/static/img/icon/laravel.png"
                     alt=""
                     width={60}
                     height={60}
@@ -119,7 +119,7 @@ export default function ProfileSection() {
                 </div>
                 <div className="cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-110 dark:border-gray-700 dark:bg-gray-800 w-[45px] h-[45px]  p-3 bg-gray-600 rounded-lg bg-blue-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border border-gray-100">
                   <Image
-                    src="/img/icon/flutter.png"
+                    src="/static/img/icon/flutter.png"
                     alt=""
                     width={60}
                     height={60}

@@ -8,21 +8,21 @@ const kontakSlice = createSlice({
           {
             id: 1,
             title: "LinkedIn",
-            logo: "/img/icon/linkedIn.png",
+            logo: "/static/img/icon/linkedIn.png",
             account: "mangwahyu",
             link:"https://www.linkedin.com/in/mangwahyu/"
           },
           {
             id: 2,
             title: "Email",
-            logo: "/img/icon/mail.png",
+            logo: "/static/img/icon/mail.png",
             account: "komangpermana7@gmail.com",
             link:"mailto:"
           },
           {
             id: 3,
             title: "Instagram",
-            logo: "/img/icon/instagram.png",
+            logo: "/static/img/icon/instagram.png",
             account: "Mangwahyu19",
             link:"https://www.instagram.com/mangwahyu19/"
           },
