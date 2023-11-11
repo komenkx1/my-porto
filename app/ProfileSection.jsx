@@ -9,7 +9,7 @@ export default function ProfileSection() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    dispatch(fetchUserData());
+    // dispatch(fetchUserData());
     setIsLoading(false);
   }, []);
 
