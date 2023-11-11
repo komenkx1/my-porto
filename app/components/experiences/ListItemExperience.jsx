@@ -1,4 +1,4 @@
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import ReactVisibilitySensor from "react-visibility-sensor";
 
 export default function ListItem(props) {
@@ -31,7 +31,7 @@ export default function ListItem(props) {
                         >
                           <div className="flex items-center gap-3">
                             <div className="thumbnail rounded-lg w-[150px] h-[150px] p-3 lg:block md:block hidden">
-                              <Image
+                             <ExportedImage
                                 src={item.logo}
                                 alt="experience-logo"
                                 width={150}

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import ReactVisibilitySensor from "react-visibility-sensor";
 
 export default function ListItemProject(props) {
@@ -29,7 +29,7 @@ export default function ListItemProject(props) {
                               position: "relative",
                             }}
                           >
-                            <Image
+                           <ExportedImage
                               src={item.logo}
                               alt="thumbnail-project"
                               sizes="100%"

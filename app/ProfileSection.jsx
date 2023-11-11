@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import ProfileSkeleton from "./components/global/ProfileSkeleton";
 import { useDispatch } from "react-redux";
 import { fetchUserData } from "@/redux/users/actions/userAction";
@@ -47,7 +47,7 @@ export default function ProfileSection() {
               <p className="text-white">Skills</p>;
               <div className="lg:grid lg:grid-cols-5 flex flex-wrap gap-3 lg:justify-normal justify-between items-center">
                 <div className="cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-110 dark:border-gray-700 dark:bg-gray-800 w-[45px] h-[45px]  bg-gray-600 rounded-lg bg-blue-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border border-gray-100">
-                  <Image
+                 <ExportedImage
                     className="mt-[5px]"
                     src="/static/img/icon/github.png"
                     alt=""
@@ -56,10 +56,10 @@ export default function ProfileSection() {
                   />
                 </div>
                 <div className="cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-110 dark:border-gray-700 dark:bg-gray-800 w-[45px] h-[45px]  p-3 bg-gray-600 rounded-lg bg-blue-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border border-gray-100">
-                  <Image src="/static/img/icon/js.png" alt="" width={60} height={60} />
+                 <ExportedImage src="/static/img/icon/js.png" alt="" width={60} height={60} />
                 </div>
                 <div className="cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-110 dark:border-gray-700 dark:bg-gray-800 w-[45px] h-[45px]  p-2 bg-gray-600 rounded-lg bg-blue-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border border-gray-100">
-                  <Image
+                 <ExportedImage
                     src="/static/img/icon/vuejs.png"
                     alt=""
                     width={60}
@@ -67,7 +67,7 @@ export default function ProfileSection() {
                   />
                 </div>
                 <div className="cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-110 dark:border-gray-700 dark:bg-gray-800 w-[45px] h-[45px]  p-3 bg-gray-600 rounded-lg bg-blue-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border border-gray-100">
-                  <Image
+                 <ExportedImage
                     src="/static/img/icon/react.png"
                     alt=""
                     width={60}
@@ -75,7 +75,7 @@ export default function ProfileSection() {
                   />
                 </div>
                 <div className="cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-110 dark:border-gray-700 dark:bg-gray-800 w-[45px] h-[45px]  p-3 bg-gray-600 rounded-lg bg-blue-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border border-gray-100">
-                  <Image
+                 <ExportedImage
                     src="/static/img/icon/nuxt.webp"
                     alt=""
                     width={60}
@@ -83,7 +83,7 @@ export default function ProfileSection() {
                   />
                 </div>
                 <div className="cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-110 dark:border-gray-700 dark:bg-gray-800 w-[45px] h-[45px]  bg-gray-600 rounded-lg bg-blue-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border border-gray-100">
-                  <Image
+                 <ExportedImage
                     className="mt-[2px]"
                     src="/static/img/icon/next.png"
                     alt=""
@@ -92,7 +92,7 @@ export default function ProfileSection() {
                   />
                 </div>
                 <div className="cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-110 p-2 dark:border-gray-700 dark:bg-gray-800 w-[45px] h-[45px]  bg-gray-600 rounded-lg bg-blue-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border border-gray-100">
-                  <Image
+                 <ExportedImage
                     className="mt-[1px]"
                     src="/static/img/icon/node.png"
                     alt=""
@@ -101,7 +101,7 @@ export default function ProfileSection() {
                   />
                 </div>
                 <div className="cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-110 dark:border-gray-700 dark:bg-gray-800 w-[45px] h-[45px]  p-1 bg-gray-600 rounded-lg bg-blue-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border border-gray-100">
-                  <Image
+                 <ExportedImage
                     className="mt-[2px]"
                     src="/static/img/icon/php.png"
                     alt=""
@@ -110,7 +110,7 @@ export default function ProfileSection() {
                   />
                 </div>
                 <div className="cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-110 dark:border-gray-700 dark:bg-gray-800 w-[45px] h-[45px]  p-3 bg-gray-600 rounded-lg bg-blue-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border border-gray-100">
-                  <Image
+                 <ExportedImage
                     src="/static/img/icon/laravel.png"
                     alt=""
                     width={60}
@@ -118,7 +118,7 @@ export default function ProfileSection() {
                   />
                 </div>
                 <div className="cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-110 dark:border-gray-700 dark:bg-gray-800 w-[45px] h-[45px]  p-3 bg-gray-600 rounded-lg bg-blue-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border border-gray-100">
-                  <Image
+                 <ExportedImage
                     src="/static/img/icon/flutter.png"
                     alt=""
                     width={60}
