@@ -20,16 +20,6 @@ const nextConfig = {
     // `placeholder="empty"` to all <ExportedImage> components.
     nextImageExportOptimizer_generateAndUseBlurImages: "true",
   },
-  exportPathMap: async function (
-    defaultPathMap,
-    { dev, dir, outDir, distDir, buildId }
-  ) {
-    return {
-      "/": { page: "/" },
-      "/project": { page: "/project" },
-      "/kontak": { page: "/kontak" },
-    };
-  },
 };
 
 module.exports = nextConfig;

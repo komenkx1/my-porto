@@ -11,6 +11,8 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Mang Wahyu",
   description: "Mang Wahyu's personal website",
+  //fav icon
+  icon: "/favicon.ico",
 };
 
 export default function RootLayout({ children }) {
