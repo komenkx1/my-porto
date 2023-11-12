@@ -22,7 +22,7 @@ export default function ListItemProject(props) {
                     >
                       <div className="">
                         <div className="thumbnail p-3 lg:block md:block hidden">
-                          <div
+                          <div className="bg-white rounded-lg shadow-md"
                             style={{
                               width: "100%",
                               height: "200px",
