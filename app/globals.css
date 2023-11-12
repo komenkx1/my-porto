@@ -27,6 +27,7 @@ body {
   /* background-color: black; */
   background-image: url('/static/img/bg/bg-2.png');
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
 
 }
