@@ -92,11 +92,11 @@ export default function Navbar() {
     },
     {
       name: "Project",
-      path: "/project",
+      path: "/project/",
     },
     {
       name: "contacts",
-      path: "/kontak",
+      path: "/kontak/",
     },
   ];
 
