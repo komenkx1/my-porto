@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
+  trailingSlash: true,
   images: {
     loader: "custom",
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
@@ -18,6 +19,16 @@ const nextConfig = {
     // nextImageExportOptimizer_generateAndUseBlurImages to false and pass
     // `placeholder="empty"` to all <ExportedImage> components.
     nextImageExportOptimizer_generateAndUseBlurImages: "true",
+  },
+  exportPathMap: async function (
+    defaultPathMap,
+    { dev, dir, outDir, distDir, buildId }
+  ) {
+    return {
+      "/": { page: "/" },
+      "/project": { page: "/project" },
+      "/kontak": { page: "/kontak" },
+    };
   },
 };
 
