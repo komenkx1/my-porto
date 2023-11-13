@@ -9,7 +9,7 @@ const kontakSlice = createSlice({
             id: 1,
             title: "LinkedIn",
             logo: "/static/img/icon/linkedIn.png",
-            account: "mangwahyu",
+            account: "www.linkedin.com/in/mangwahyu/",
             link:"https://www.linkedin.com/in/mangwahyu/"
           },
           {
@@ -17,7 +17,7 @@ const kontakSlice = createSlice({
             title: "Email",
             logo: "/static/img/icon/mail.png",
             account: "komangpermana7@gmail.com",
-            link:"mailto:"
+            link:"mailto:komangpermana7@gmail.com"
           },
           {
             id: 3,
